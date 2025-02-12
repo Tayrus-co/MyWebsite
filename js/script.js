@@ -3,7 +3,7 @@ function runTypingEffect() {
   const typingElement = document.getElementById("typing-text");
   const typingDelay = 100; // Harf başına gecikme
   const eraseDelay = 50; // Silme hızı
-  const waitTime = 3000; // Yazı tamamlandıktan sonra bekleme süresi (ms)
+  const waitTime = 1000; // Yazı tamamlandıktan sonra bekleme süresi (ms)
 
   let i = 0;
   let isDeleting = false;
@@ -30,3 +30,12 @@ function runTypingEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", runTypingEffect);
+
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});

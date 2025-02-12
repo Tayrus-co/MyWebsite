@@ -1,3 +1,43 @@
+.navbar {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 0;
+
+  .navbar-brand img {
+    height: 60px; /* Daha büyük yapmak için değeri artır */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #f8b400; /* TEI sitesine benzer altın rengi hover efekti */
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+}
+
+/* Sayfa kaydırılınca navbar koyulaşsın */
+.navbar.scrolled {
+  background: rgba(61, 61, 61, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-item .nav-link.active {
+  color: #f8b400 !important; /* Sarı tonu */
+  font-weight: bold;
+}
+.navbar-nav .nav-item {
+  margin: 0 10px; /* Her menü öğesi arasında 15px boşluk */
+}
+
 .video-container {
   position: relative;
   width: 100%;
@@ -49,7 +89,7 @@
   width: 230px; /* Fotoğrafın genişliğini artır */
   height: 230px; /* Oranları koruyarak yüksekliği artır */
   object-fit: cover; /* Fotoğrafın orantılı görünmesini sağlar */
-  border: 5px solid #800404; /* Fotoğrafa çerçeve ekler (opsiyonel) */
+  border: 5px solid #f8b400; /* Fotoğrafa çerçeve ekler (opsiyonel) */
 }
 
 .project:hover {
@@ -78,7 +118,7 @@
   z-index: 10;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header .social i {
     font-size: 30px;
   }
@@ -97,6 +137,20 @@
     border-bottom: var(--bs-dark) solid 1px;
     padding-bottom: 20px;
   }
+  #typing-text {
+    font-size: 22px !important; /* Mobilde küçültülmüş boyut */
+  }
+  .roles span {
+    font-size: 16px !important;
+  }
+  #background-video {
+    display: none; /* Mobilde videoyu gizle */
+  }
+  body {
+    background: url("../images/11.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 .social a[href="#"] {
   opacity: 0.7;
@@ -111,4 +165,95 @@
 }
 .proje {
   pointer-events: none;
+}
+#typing-text {
+  font-size: 36px; /* Varsayılan boyut */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Daha küçük ekranlar için (telefonlar) */
+@media (max-width: 480px) {
+  #typing-text {
+    font-size: 18px; /* Küçük telefonlarda daha da küçült */
+  }
+  .roles span {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar-nav {
+    display: flex; /* Flexbox ile hizalama */
+    flex-direction: row; /* Yatay tut */
+    justify-content: center; /* Ortaya hizala */
+    gap: 10px; /* Menü öğeleri arasında boşluk */
+    flex-wrap: wrap; /* Ekrana sığmazsa alt satıra geç */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px; /* Çok sıkışmasın */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Mobilde daha küçük font */
+    padding: 6px 10px; /* Daha az padding */
+    white-space: nowrap; /* Kelimeler aşağı düşmesin */
+  }
+
+  .navbar-brand img {
+    height: 40px; /* Logoyu biraz küçült */
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px 0; /* Navbar yüksekliğini azalt */
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px; /* Menü öğeleri arasındaki boşluğu daralt */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 3px; /* Daha sıkı hizalama */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px; /* Daha küçük font */
+    padding: 4px 6px; /* Daha az padding */
+  }
+
+  .navbar-brand img {
+    height: 40px !important; /* Logoyu küçült */
+  }
+  /* Profil Bölümü Arka Planı */
+  .profile {
+    background-color: #f8f9fa !important; /* Açık beyaz ton */
+    padding: 20px;
+    border-radius: 8px; /* Köşeleri yuvarlak yapmak için */
+  }
+
+  /* Skills Bölümü Arka Planı */
+  .skills {
+    background-color: #f8f9fa !important; /* Aynı beyaz ton */
+    padding: 20px;
+    border-radius: 8px; /* Köşeleri yuvarlak yapmak için */
+  }
+  /* About, Profile ve Skills Bölümlerindeki Margin’i Sıfırlama */
+  .about,
+  .profile,
+  .skills {
+    margin-bottom: 0 !important; /* Alt margin sıfırlanıyor */
+    margin-top: 0 !important;
+    padding-bottom: 0 !important; /* Alt padding de sıfırlanabilir */
+  }
+
+  /* İstediğiniz gibi daha fazla margin sıfırlamak için yukarıdaki gibi kodu genişletebilirsiniz. */
 }

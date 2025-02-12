@@ -20,8 +20,38 @@
   </head>
   <body>
     <header class="header vh-100 text-center position-relative">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Tayrus Logo" height="40">
+            </a>
+    
+            <!-- Mobil Menü Butonu -->
+          
+    
+            <!-- Menü Öğeleri -->
+            <div class="navbar-nav" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profil">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conta">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
       <div class="video-container">
-        <video autoplay muted loop id="background-video">
+        <video autoplay loop muted playsinline id="background-video">
           <source src="videos/WebArkaPlan.mp4" type="video/mp4" />
           Tarayıcınız video formatını desteklemiyor.
         </video>  
@@ -31,7 +61,7 @@
         <h5 class="text-primary fs-3 fw-bold text-uppercase">Taha Pelen</h5>
         <h1 id="typing-text" class="display-1 fw-bold text-white"></h1>
 
-        <p class="roles text-white text-uppercase fs-4">
+        <p class="roles text-white text-uppercase fs-4 ">
           <span
             >Turning bold ideas into reality through tech and business.
           </span>
@@ -105,12 +135,12 @@
     </section>
 
     <!-- Profile & Skills -->
-    <section class="profile my-6">
+    <section class="profile my-6" id="profil">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <h3 class="text-uppercase fw-bold">Profile</h3>
-            <p>
+            <p >
               Here is some more info about myself to help you get to know me
               better.
             </p>
@@ -149,7 +179,7 @@
           </div>
           <div class="col-md-6">
             <h3 class="text-uppercase fw-bold">Skills</h3>
-            <p>A breakdown of my skills in percentages. 😉</p>
+            <p >A breakdown of my skills in percentages. 😉</p>
             <br />
             <h5><i class="fas fa-check"></i> HTML 5</h5>
             <div
@@ -259,12 +289,12 @@
           <div class="col-md-6 mb-4">
             <div class="project shadow-lg rounded-5">
               <a
-                href="images/Empty.png"
+                href="images/Şablonİçin1.png"
                 data-lightbox="images"
                 data-title="Cliboard Landing Page"
               >
                 <img
-                  src="images/Empty.png"
+                  src="images/Şablonİçin1.png"
                   alt=""
                   class="img-fluid rounded-3"
                 />
@@ -275,12 +305,12 @@
           <div class="col-md-6 mb-4">
             <div class="project shadow-lg rounded-5">
               <a
-                href="images/Empty.png"
+                href="images/Şablonİçin2.png"
                 data-lightbox="images"
                 data-title="Loop Studios Website"
               >
                 <img
-                  src="images/Empty.png"
+                  src="images/Şablonİçin2.png"
                   alt=""
                   class="img-fluid rounded-3"
                 />
@@ -478,7 +508,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact text-bg-dark bg-gradient py-5">
+    <section class="contact text-bg-dark bg-gradient py-5" id="conta">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
